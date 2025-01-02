@@ -1,0 +1,27 @@
+
+---
+
+### Modelo de `.gitignore`
+
+```plaintext
+# Ignorar arquivos e pastas gerados pelo Robot Framework
+log.html
+output.xml
+report.html
+
+# Ignorar arquivos e pastas comuns do Python
+__pycache__/
+*.py[cod]
+*.env
+*.venv
+.env
+.venv
+
+# Ignorar arquivos específicos de IDEs
+.vscode/
+.idea/
+*.iml
+
+# Ignorar arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
