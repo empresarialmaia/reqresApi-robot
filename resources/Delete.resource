@@ -3,15 +3,14 @@
 Library    RequestsLibrary
 
 *** Variables ***
-${HOST}    https://reqres.in/
-#Rotas
+${BASE_URL}    https://reqres.in
 
-${DELETE_SINGLE_USER}   api/users
+${DELETE_SINGLE_USER}   /api/users
 
 *** Keywords ***
 Deletar usuário 
 ...    [Arguments]    ${id} 
     &{headers}    Create Dictionary    content-type=application/json     
 
-    ${response}   DELETE    url=${HOST}${DELETE_SINGLE_USER}/${id}    headers=&{headers}
+    ${response}   DELETE    url=${BASE_URL}${DELETE_SINGLE_USER}/${id}    headers=&{headers}
     Status Should Be    204    ${response} 
